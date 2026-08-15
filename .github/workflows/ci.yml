@@ -1,0 +1,34 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11.19.0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: pnpm
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm test
+      - run: python -m unittest discover -s tests -p "test_*.py"
+      - name: Synthetic scale smoke test
+        run: |
+          python tools/generate_synthetic_vault.py --output .synthetic-vault --count 2000
+          python tools/migrate_word_notes.py --root .synthetic-vault --json .synthetic-plan.json --fail-on-unresolved
+      - run: pnpm build:production
+      - name: Verify committed plugin bundle
+        run: git diff --exit-code -- main.js

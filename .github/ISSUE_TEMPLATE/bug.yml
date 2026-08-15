@@ -1,0 +1,32 @@
+name: Bug report
+description: Report a reproducible plugin or migration problem
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: Do not attach a real vault or copyrighted material. Use the smallest synthetic reproduction possible.
+  - type: textarea
+    id: summary
+    attributes:
+      label: What happened?
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Synthetic reproduction
+      description: Include minimal frontmatter, paths, and commands.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Kotoba Vault version
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Obsidian/Python version and operating system.

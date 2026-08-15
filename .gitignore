@@ -1,0 +1,12 @@
+node_modules/
+coverage/
+dist/
+.synthetic-vault/
+.synthetic-plan.json
+migration-plan.json
+__pycache__/
+*.py[cod]
+*.log
+.DS_Store
+Thumbs.db
+application/

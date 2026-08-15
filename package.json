@@ -1,0 +1,29 @@
+{
+  "name": "kotoba-vault",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "pnpm@11.19.0",
+  "description": "Local-first Japanese vocabulary organization for Obsidian",
+  "author": "Ushio Mi",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saegusa1996/kotoba-vault.git"
+  },
+  "bugs": {
+    "url": "https://github.com/saegusa1996/kotoba-vault/issues"
+  },
+  "homepage": "https://github.com/saegusa1996/kotoba-vault#readme",
+  "scripts": {
+    "build": "node build.mjs",
+    "build:production": "node build.mjs --production",
+    "test": "node --test tests/*.test.js"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.0",
+    "obsidian": "^1.8.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
