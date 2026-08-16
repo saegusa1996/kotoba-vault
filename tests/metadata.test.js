@@ -18,7 +18,7 @@ test("release metadata stays aligned", () => {
   assert.equal(versions[manifest.version], manifest.minAppVersion);
 });
 
-test("committed plugin entry point is a self-contained bundle", () => {
+test("generated plugin entry point is a self-contained bundle", () => {
   const bundle = fs.readFileSync(path.join(root, "main.js"), "utf8");
   assert.match(bundle, /require\(["']obsidian["']\)/);
   assert.doesNotMatch(bundle, /require\(["']\.\/src\//);

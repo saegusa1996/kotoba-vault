@@ -12,7 +12,7 @@ migration CLI for existing Markdown vocabulary collections.
 
 ![Workflow: inbox note plus reading metadata becomes a gojuon-filed note](assets/workflow.svg)
 
-> Current release: [v0.1.0](https://github.com/saegusa1996/kotoba-vault/releases/tag/v0.1.0).
+> Current release: [0.1.1](https://github.com/saegusa1996/kotoba-vault/releases/tag/0.1.1).
 
 ## Why this exists
 
@@ -66,6 +66,16 @@ not contain or require a learner's notes, books, subtitles, audio, or video.
    into it.
 3. Reload Obsidian and enable **Kotoba Vault**.
 4. Set your vocabulary root, inbox, and reading-property name in settings.
+
+## Install the public beta with BRAT
+
+1. Install and enable [BRAT](https://obsidian.md/plugins?id=obsidian42-brat).
+2. Run **BRAT: Add a beta plugin for testing** from the command palette.
+3. Enter `https://github.com/saegusa1996/kotoba-vault`.
+4. Enable **Kotoba Vault** under **Settings → Community plugins**.
+
+BRAT installs the same release artifacts used by Obsidian's Community plugin
+directory. Back up a test vault before evaluating automatic file moves.
 
 The default layout is:
 

@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.1 - 2026-08-16
+
+- Align release tags with Obsidian's exact manifest-version requirement.
+- Publish `main.js` only as a GitHub Release artifact.
+- Add BRAT public-beta installation instructions.
+
 ## 0.1.0 - 2026-08-16
 
 - Add metadata-driven gojūon sorting for Obsidian vocabulary notes.

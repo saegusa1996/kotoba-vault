@@ -3,7 +3,7 @@ name: Release
 on:
   push:
     tags:
-      - "v*"
+      - "*"
 
 permissions:
   contents: write
@@ -26,6 +26,11 @@ jobs:
       - run: pnpm install --frozen-lockfile
       - run: pnpm test
       - run: python -m unittest discover -s tests -p "test_*.py"
+      - name: Verify tag matches manifest version
+        run: >-
+          node -e "const m=require('./manifest.json');
+          const tag=process.env.GITHUB_REF_NAME;
+          if(tag!==m.version){throw new Error('Release tag '+tag+' must equal manifest version '+m.version)}"
       - run: pnpm build:production
       - name: Create GitHub release
         env:

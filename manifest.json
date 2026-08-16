@@ -1,7 +1,7 @@
 {
   "id": "kotoba-vault",
   "name": "Kotoba Vault",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "minAppVersion": "1.5.0",
   "description": "Organize Japanese vocabulary notes into gojuon folders from a reading property.",
   "author": "Ushio Mi",

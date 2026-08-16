@@ -1,6 +1,7 @@
 node_modules/
 coverage/
 dist/
+main.js
 .synthetic-vault/
 .synthetic-plan.json
 migration-plan.json
