@@ -16,6 +16,11 @@ test("release metadata stays aligned", () => {
   assert.equal(manifest.id, "kotoba-vault");
   assert.equal(packageJson.version, manifest.version);
   assert.equal(versions[manifest.version], manifest.minAppVersion);
+  assert.equal(
+    packageJson.scripts.build,
+    packageJson.scripts["build:production"],
+    "the standard build must match the release build for directory verification"
+  );
 });
 
 test("generated plugin entry point is a self-contained bundle", () => {

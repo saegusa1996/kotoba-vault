@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.2 - 2026-08-16
+
+- Make the standard `build` script produce the same production bundle used by
+  GitHub Releases and automated community-directory rebuilds.
+- Add GitHub artifact provenance attestation for the released plugin bundle.
+
 ## 0.1.1 - 2026-08-16
 
 - Align release tags with Obsidian's exact manifest-version requirement.

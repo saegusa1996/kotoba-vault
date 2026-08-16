@@ -12,7 +12,7 @@ migration CLI for existing Markdown vocabulary collections.
 
 ![Workflow: inbox note plus reading metadata becomes a gojuon-filed note](assets/workflow.svg)
 
-> Current release: [0.1.1](https://github.com/saegusa1996/kotoba-vault/releases/tag/0.1.1).
+> Current release: [0.1.2](https://github.com/saegusa1996/kotoba-vault/releases/tag/0.1.2).
 
 ## Why this exists
 

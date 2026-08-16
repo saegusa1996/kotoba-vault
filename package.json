@@ -1,6 +1,6 @@
 {
   "name": "kotoba-vault",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "private": true,
   "packageManager": "pnpm@11.19.0",
   "description": "Local-first Japanese vocabulary organization for Obsidian",
@@ -16,7 +16,8 @@
   "homepage": "https://github.com/saegusa1996/kotoba-vault#readme",
   "scripts": {
     "pretest": "node build.mjs --production",
-    "build": "node build.mjs",
+    "build": "node build.mjs --production",
+    "build:dev": "node build.mjs",
     "build:production": "node build.mjs --production",
     "test": "node --test tests/*.test.js"
   },

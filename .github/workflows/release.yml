@@ -7,6 +7,8 @@ on:
 
 permissions:
   contents: write
+  id-token: write
+  attestations: write
 
 jobs:
   release:
@@ -32,6 +34,10 @@ jobs:
           const tag=process.env.GITHUB_REF_NAME;
           if(tag!==m.version){throw new Error('Release tag '+tag+' must equal manifest version '+m.version)}"
       - run: pnpm build:production
+      - name: Attest plugin bundle
+        uses: actions/attest@v4
+        with:
+          subject-path: main.js
       - name: Create GitHub release
         env:
           GH_TOKEN: ${{ github.token }}
