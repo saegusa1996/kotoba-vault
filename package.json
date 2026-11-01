@@ -23,7 +23,7 @@
   },
   "devDependencies": {
     "esbuild": "^0.25.0",
-    "obsidian": "^1.8.0"
+    "obsidian": "^1.14.4"
   },
   "engines": {
     "node": ">=18"
